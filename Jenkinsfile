@@ -1,17 +1,16 @@
 pipeline {
     agent any
+    environment {
+            PROFILE = "Hudson"
+    }
 
     stages {
-        stage('svn checkout') {
+
+        stage('build docker image') {
             steps {
-                git "https://github.com/naturenaga/sampleproject.git"
+                sh "ls"
             }
         }
-        stage('compile package') {
-            steps {
-                tool name: 'maven-3', type: 'maven'
-                sh 'mvn package'
-            }
-        }
+     
     }
 }
