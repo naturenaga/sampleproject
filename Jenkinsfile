@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('svn checkout') {
+        stage('test') {
             steps {
-                sh echo "Hello"
+                sh "echo "Hello" "
             }
         }
       }
