@@ -1,11 +1,16 @@
 pipeline {
     agent any
+    environment {
+            PROFILE = "Hudson"
+    }
 
     stages {
-        stage('test') {
+
+        stage('build docker image') {
             steps {
-                ls 
+                sh "ls"
             }
         }
-      }
+     
+    }
 }
